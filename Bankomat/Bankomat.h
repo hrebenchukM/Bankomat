@@ -6,6 +6,16 @@
 using namespace std;
 
 
+class Nominal
+{
+public:
+	int value;
+	int count;
+	Nominal() = default;
+	Nominal(int val, int n);
+};
+
+
 class Bankomat
 {
 private:
@@ -21,21 +31,12 @@ public:
 
 	void Init(string id,int max,int min);
 	string toString();
-	void loadMoney(Nominal nominalsArray[]);
+	void loadMoney(Nominal[]);
 	int  withdrawMoney();
-
-
-
+	bool doWithdraw(int);
+	void Print();
 };
 
-class Nominal
-{
-public:
-	int value;
-	int count;
-	Nominal() = default;
-	Nominal(int val, int n);
-};
 
 
 
